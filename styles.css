@@ -1,0 +1,134 @@
+:root {
+    --text-h1: 2rem;
+    --text-p: 1.2rem;
+    --button-font-size: 1.2rem;
+    
+    --font-weight-light: 500;
+    --font-weight-normal: 600;
+    --font-weight-bold: 700;
+    --font-family: 'Inter', sans-serif;
+    
+    --background: hsl(0, 0%, 8%);
+    --card-background: hsl(0, 0%, 12%);
+    --button-background: hsl(0, 0%, 20%);
+    
+    --white: hsl(0, 0%, 100%);
+    --green: hsl(75, 94%, 57%);
+    --black: hsl(0, 0%, 8%);
+    --line-width: 1.5;
+
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    caret-color: black;
+
+    
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--white);
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--card-background);
+    min-width: 28rem;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+}
+
+.image-container{
+    width: 8rem;
+}
+.profile-picture{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+}
+.name{
+    font-family: var(--font-family);
+    font-size: var(--text-h1);
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-light);
+    
+}
+
+.location{
+    font-size: var(--text-p);
+    margin-bottom: 2rem;
+    color: var(--green);
+    font-weight: var(--font-weight-bold);
+    
+}
+
+.title{
+    font-size: var(--text-p);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 1.2rem;
+    color: rgba(214, 214, 214, 0.741);
+}
+
+
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 35rem;
+}
+
+.button{
+    font-size:var(--button-font-size);
+    width: 100%;
+    margin-top: 1rem;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family) ;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    padding: 1.2rem 3.8rem;
+    background-color: var(--button-background);
+    color: var(--white);
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    caret-color: black;
+}
+
+.button:hover{
+    background-color: var(--green);
+    color: var(--black);
+}
+
+@media(max-width: 64rem){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width: 30rem){
+    html{
+        font-size: 55%;
+    }
+    .button{
+        padding: 1.1rem 2rem;
+    }
+}
